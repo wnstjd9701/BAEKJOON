@@ -7,3 +7,5 @@ elif A < B:
     print('<')
 else:
     print('==')
+
+print("안녕하세요")
