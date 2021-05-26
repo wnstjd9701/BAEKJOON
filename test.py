@@ -13,4 +13,3 @@ for i in range(2,101):
             else:
                 arr.remove(i*mul)
         mul+=1   
-print(arr)
