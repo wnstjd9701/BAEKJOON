@@ -1,4 +1,5 @@
 # 백준 1978번 문제 - 소수찾기
+# sort_algorithm
 n = int(input())
 sosu = list(map(int, input().split()))
 def prime(num):
