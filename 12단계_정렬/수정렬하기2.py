@@ -4,6 +4,6 @@ num = []
 
 for _ in range(n):
     x = int(input())
-    num.append(x)
+    num.append(x) # 추가 
 for i in sorted(num):
-    print(i)
+    print(i) # 출력
