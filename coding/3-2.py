@@ -26,7 +26,7 @@ data.sort()
 first = data[n-1]   
 second = data[n-2]
 
-count = int(m / (k+1)) * k
+count = int(m / (k+1)) * k  # () 반복
 count += m % (k+1)
 
 result = 0
