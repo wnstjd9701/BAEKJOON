@@ -10,7 +10,7 @@ while True:
     for i in range(k):  # 가장 큰 수를 k번 더하기 
         if m == 0:
             break
-        result += first
+        result += first # 가장 큰 수 더하기 k번 반복
         m -= 1
     if m == 0:
         break
