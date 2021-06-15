@@ -4,12 +4,14 @@ coin_list = []
 for i in range(n):
     coin = int(input())
     coin_list.append(coin)
+
 coin_list.sort(reverse=True)
-print(coin_list)
+
 count = 0
 for coin in coin_list:
-    val = k/coin
+    if k==0: break
+    val = k//coin
     count += val
-    k = int(k%coin)
+    k = k%coin
 print(count)
 print(coin_list)
