@@ -1,6 +1,6 @@
 # 큰 수의 법칙
 n, m, k = map(int, input().split()) # n: 배열의 크기, m: m번 더하기, k: k번 까지 더할 수 있음
-data_list = map(int, input().split())
+data_list = map(int, input().split()) # 동전 입력
 
 data_list.sort() # 정렬
 first = data_list[n-1]  # 기징 큰 수 
