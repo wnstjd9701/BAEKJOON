@@ -17,3 +17,4 @@ for coin in coin_list:
     count += val # 동전의 개수 더해주기
     k = k%coin # 나머지 값 k에 저장
 print(count) # 필요한 동전의 최소 개수 
+# greedy algorithm
