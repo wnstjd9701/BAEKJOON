@@ -1,4 +1,4 @@
-# 큰 수의 법칙
+# 이것이 취업을 위한 코딩테스트 - 큰 수의 법칙
 n, m, k = map(int, input().split()) # n: 배열의 크기, m: m번 더하기, k: k번 까지 더할 수 있음
 data_list = map(int, input().split()) # 동전 입력
 
