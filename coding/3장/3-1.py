@@ -5,4 +5,4 @@ coin_list = [500,100,50,10]
 for coin in coin_list:
     count += n // coin
     n %= coin
-print(count)    # coin 개수 출력
+print(count)    # coin 개수 출력..
