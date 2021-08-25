@@ -20,3 +20,4 @@ for plan in plans:
         continue
     # 이동 수행
     x, y = nx, ny
+print(x, y)
