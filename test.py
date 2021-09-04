@@ -1,11 +1,8 @@
-# 4-2 coding test - 시각
-h = int(input())
+def recursive_function(i):
+    if i == 100:
+        return 
+    print(i, '번째 재귀 함수에서', i+1, '번째 재귀 함수를 호출합니다.')
+    recursive_function(i+1)
+    print(i, '번째 재귀 함수를 종료합니다.')
 
-count = 0
-
-for i in range(h+1):
-    for j in range(60):
-        for k in range(60):
-            if '3' in str(i) + str(j) + str(k):
-                count += 1
-print(count)
+recursive_function(1)
