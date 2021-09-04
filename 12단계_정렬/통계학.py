@@ -5,6 +5,7 @@ for i in range(n):
     num = int(input())
     arr.append(num)
 arr.sort()
-print(sum(arr) // len(arr))
+print(sum(arr) // len(arr)) # 산술평균
+print(arr[n // 2]) # 중앙값
 
-print(arr[n // 2])
+print()
