@@ -1,5 +1,5 @@
-import sys
-for i in range(2):
-    n = sys.stdin.readline().split()
+answer = []
+for i in range(10):
+    answer.append(i + 1)
 
-print(n[0][0], " ", n[1])
+print(answer)
