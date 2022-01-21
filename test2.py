@@ -6,3 +6,4 @@ graph = [
     [5,INF,0]
 ]
 print(graph[0][1])
+# DFS
