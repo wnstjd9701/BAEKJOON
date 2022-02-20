@@ -1,12 +1,24 @@
-sugar = int(input())
+def binary_search(array, target, start, end):
+   while start <= end: 
+        mid = (start + end) // 2
+        if mid == target:
+            return mid
+        elif mid < target:
+            start = mid + 1
+        else:
+            end = mid - 1
+        # elif mid > target:
+        #   end = mid - 1
+        # else:
+        #   start = mid + 1
+        
+   return None
 
-bag = 0
-while sugar >= 0:
-    if sugar%5 == 0: # 5의 배수이면
-        bag += (sugar // 5) # 5로 나눈 몫을 구해야 정수가 됨
-        print(bag)
-        break
-    sugar -= 3
-    bag += 1 # 5의 배수가 될 때까지 설탕 -3, 봉지 +1
+n, target = list(map(int, input().split()))
+array = list(map(int, input().split()))
+
+result = binary_search(array, target, 0, n-1)
+if result == None:
+    print('Nothing')
 else:
-    print(-1)
+    print(result + 1)

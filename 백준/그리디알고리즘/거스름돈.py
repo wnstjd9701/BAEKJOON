@@ -8,3 +8,5 @@ for i in coin:
     count += (val // i)
     val = val % i
 print(count)
+
+
