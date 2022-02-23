@@ -26,5 +26,5 @@ while(start <= end):
         result = mid # 최대한 덜 잘랐을 때가 정답이므로 여기에서 result 에 저장
         start = mid + 1
 
-# 정답 출력.
+# 정답 출력..
 print(result)
