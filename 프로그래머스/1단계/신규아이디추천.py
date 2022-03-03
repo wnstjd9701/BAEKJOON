@@ -24,4 +24,4 @@ def solution(new_id):
     if len(answer) <= 3:
         answer = answer + answer[-1] * (3-len(answer))
     return answer
-    # end..
+    # end...
