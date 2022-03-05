@@ -1,5 +1,4 @@
-new_id = 'asdfg!!@#'
-print(new_id.lower())
-print(type(new_id))
-new_id.strip('.')
-# test
+borrow = [False] * 5
+borrow[2] = True
+borrow[4] = True
+print(borrow.count(True))
