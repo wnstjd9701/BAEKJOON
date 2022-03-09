@@ -1,17 +1,14 @@
 # 프로그래머스 1단계 - 실패율
 def solution(N, stages):
-    answer = []
-    score = []
-    R = len(stages)
-    for i in range(1, N + 1):
-        if R != 0:
-            count = stages.count(i)
-            score.append((i, count / R))
-            R -= count
-        else:
-            score.append((i, 0))
+    fail_rate = {}
+    total_user = len(stages)
 
-    score = sorted(score, key=lambda x: (-x[1], x[0]))
-    for i in range(len(score)):
-        answer.append(score[i][0])
-    return answer
+    for stage in range(1, N+1):
+        if total_user != 0:
+            fail_user = stages.count(stage)
+            fail_rate[stage] = fail_user / total_user
+            total_user -= fail_user
+        else:
+            fail_rate[stage] = 0
+
+    return sorted(fail_rate, key=lambda x : fail_rate[x], reverse=True)
