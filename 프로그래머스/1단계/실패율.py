@@ -12,3 +12,4 @@ def solution(N, stages):
             fail_rate[stage] = 0
 
     return sorted(fail_rate, key=lambda x : fail_rate[x], reverse=True)
+# end
