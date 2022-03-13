@@ -15,3 +15,4 @@ def solution(board, moves):
                         answer += 2
                 break
     return answer
+    # end
