@@ -15,7 +15,7 @@ def bfs(n):
         v = queue.popleft()
         print(v, end= ' ')
         for i in graph[v]:
-            if not visited[i]:
+            if not visited[i]: # visited[i] = False
                 queue.append(i)
                 visited[i] = True
 
