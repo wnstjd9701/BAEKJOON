@@ -31,3 +31,4 @@ for i in range(n-1):
     res += m * roads[i]
 
 print(res)
+# end
