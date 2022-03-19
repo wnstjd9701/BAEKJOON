@@ -42,3 +42,4 @@ def bfs(x, y):
   return graph[N-1][M-1]
 
 print(bfs(0, 0))
+# END
