@@ -41,5 +41,5 @@ def bfs(x, y):
   # 마지막 값에서 카운트 값을 뽑는다.
   return graph[N-1][M-1]
 
-print(bfs(0, 0))
+print(bfs(0, 0)) # BFS
 # END
