@@ -1,5 +1,11 @@
-borrow = [False] * 5
-borrow[2] = True
-borrow[4] = True
-print(borrow.count(True))
-# count index
+# command = input()
+# print(command.startswith('push_back'))
+# print(command)
+# print(command.split())
+
+s = 'abcdefg'
+s.endswith('c') # False
+s.endswith('g') # True
+s.endswith('c', 0, 10) # False
+print(s.endswith('c', 0, 3)) # True
+
