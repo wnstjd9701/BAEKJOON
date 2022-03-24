@@ -1,4 +1,4 @@
-string = input()
+string = input().split()
 for i in string:
     print(i)
 print(string)
