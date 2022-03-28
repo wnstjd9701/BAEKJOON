@@ -24,3 +24,4 @@ m_list = list(map(int, input().split(' ')))
 
 for i in range(len(m_list)):
     print(binary_search(m_list[i], n_list))
+# binary_search
