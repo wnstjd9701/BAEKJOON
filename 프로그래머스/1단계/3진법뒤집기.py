@@ -7,7 +7,6 @@ def solution(n):
         nums.append(n%3)
         n = n//3
     nums = nums[::-1]
-    print(nums)
     for i in range(len(nums)):
         answer += nums[i] * (3**i)
     
