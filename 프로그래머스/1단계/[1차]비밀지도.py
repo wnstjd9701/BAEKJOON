@@ -9,3 +9,5 @@ def solution(n, arr1, arr2):
         answer.append(value)
 
     return answer
+
+# Kakao Coding Test
