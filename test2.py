@@ -1,5 +1,9 @@
-string = input().split()
-for i in string:
-    print(i)
-print(string)
-# end..
+def solution(emails):
+    answer = 0
+    arr = list(emails.split('@'))
+    if len(arr) > 2:
+        print('1')
+    print(arr)
+    
+
+print(solution('dco@m.com'))
