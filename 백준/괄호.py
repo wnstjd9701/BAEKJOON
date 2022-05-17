@@ -18,3 +18,4 @@ for _ in range(n):
         print('YES')
     else:
         print('NO')
+        # end
