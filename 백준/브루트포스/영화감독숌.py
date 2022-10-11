@@ -10,5 +10,5 @@ while True :
     if cnt == N :
         print(nbr)
         break
-    print(nbr)
+   
     nbr += 1
