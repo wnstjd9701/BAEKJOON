@@ -18,6 +18,7 @@ def solution(people, limit):
     
     return answer
 
+# solution 2
 def solution2(people, limit):
     answer = 0
     people.sort()
