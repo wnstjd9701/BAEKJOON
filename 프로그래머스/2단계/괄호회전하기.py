@@ -21,7 +21,6 @@ def solution(s):
     for i in range(len(s)):
         if check(s): answer += 1
         s = s[1:] + s[:1]
-    print(answer)
     return answer
 
 solution("[](){}")
