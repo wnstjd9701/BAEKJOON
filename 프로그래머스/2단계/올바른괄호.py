@@ -10,3 +10,4 @@ def solution(s):
         else:
             return False
     return False if len(stack) else True
+    # stack
