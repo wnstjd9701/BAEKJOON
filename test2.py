@@ -1,10 +1,19 @@
-def solution(emails):
-    answer = 0
-    arr = list(emails.split('@'))
-    if len(arr) > 2:
-        print('1')
-    print(arr)
-    
+def dfs(graph, v, visited):
+    visited[v] = True
+    print(v, end=" ")
+    for i in graph[v]:
+        if not visited:
+            dfs(graph, i, visited)
 
-print(solution('dco@m.com'))
-# end..
+from collections import deque
+def bfs(graph, start, visited):
+    queue = deque([start])
+    visited[start] = True
+
+    while queue:
+        v = queue.popleft()
+        print(v, end=' ')
+        for i in graph[v]:
+            if not visited[i]:
+                queue.append(i)
+                visited[i] = True
