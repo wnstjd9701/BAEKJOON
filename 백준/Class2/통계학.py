@@ -4,7 +4,7 @@ from collections import Counter
 n = int(sys.stdin.readline())
 num = []
 for _ in range(n):
-    num.append(int(input()))
+    num.append(int(sys.stdin.readline()))
 # 산술평균
 print(round(sum(num)/n)) 
 
@@ -14,7 +14,6 @@ print(num[n//2])
 
 # 최빈값
 cnt_li = Counter(num).most_common()
-print(cnt_li)
 if len(cnt_li) > 1 and cnt_li[0][1] == cnt_li[1][1]: # 최빈값이 2개 이상일 경우
     print(cnt_li[1][0])
 else:
