@@ -13,7 +13,7 @@ def solution(fees, records):
         time, car, cmd = record.split()
         hour, minute = time.split(":")
         minutes = int(hour) * 60 + int(minute) # 시간 -> 분 환산
-
+        print(parking)
         if cmd == 'IN':
             parking[car] = minutes
         elif cmd == 'OUT':
