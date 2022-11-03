@@ -1,4 +1,4 @@
-from collections import Counter
-value = 'Hello world'
-count = Counter(value)
-print(count.most_common())
+import heapq
+list = [1,2,3,4,5]
+heapq.heapify(list)
+print(list)
