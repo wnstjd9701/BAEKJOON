@@ -1,14 +1,27 @@
 # 백준 2630번 문제 - 색종이 만들기
-n = int(input())
-graph = [list(map(int, input().split())) for _ in range(n)]
-answer = [0,0]
-def dfs(x,y,n):
-    visited = graph[x][y]
-    for i in range(n):
-        for j in range(n):
-            if graph[i][j] == visited:
-                dfs(x,y,n)
-                answer[1] += 1
-            else:
-                answer[0] += 1
-dfs(0,0,n)
+import sys
+
+N = int(sys.stdin.readline())
+paper = [list(map(int, sys.stdin.readline().split())) for _ in range(N)] 
+
+result = []
+
+def solution(x, y, N) :
+  color = paper[x][y]
+  for i in range(x, x+N) :
+    for j in range(y, y+N) :
+      if color != paper[i][j] :
+        solution(x, y, N//2)
+        solution(x, y+N//2, N//2)
+        solution(x+N//2, y, N//2)
+        solution(x+N//2, y+N//2, N//2)
+        return
+  if color == 0 :
+    result.append(0)
+  else :
+    result.append(1)
+
+
+solution(0,0,N)
+print(result.count(0))
+print(result.count(1))
