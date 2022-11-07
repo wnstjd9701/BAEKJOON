@@ -20,7 +20,7 @@ def bfs():
                 matrix[nx][ny] = matrix[x][y] + 1
                 queue.append([nx, ny])
 bfs()
-print(matrix)
+
 for i in matrix:
     for j in i:
         if j == 0:
