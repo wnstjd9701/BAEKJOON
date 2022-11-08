@@ -38,7 +38,6 @@ for k in range(max_height + 1):
     res_cnt = []
     for i in range(n):
         for j in range(n):
-            print('I: ', i,' J: ', j, ' K', k)
             if graph[i][j] > k and visited[i][j] == 0:
                 res_cnt.append(bfs(i,j,k))
                 count = 0
