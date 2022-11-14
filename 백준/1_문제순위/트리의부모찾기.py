@@ -1,8 +1,10 @@
 # 백준 11725번 문제 - 트리의 부모찾기
-from collections import deque
+set.setrecursionlimit(10**9)
+
 n = int(input())
 tree = [[] for _ in range(n+1)]
-dict = {}
+visited = [False for _ in range(n+1)]
+
 for _ in range(n-1):
     root, child = map(int ,input().split())
     tree[root].append(child)
