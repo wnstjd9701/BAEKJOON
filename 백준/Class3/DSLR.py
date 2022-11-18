@@ -1,38 +1,34 @@
 # 백준 9019번 - DSLR
+# DSLR
+from collections import defaultdict
 from collections import deque
-t = int(input())
 
-def order(num ,case):
-    if case == 'D':
-        return (int(num)*2) % 10000
-    elif case == 'S':
-        return (int(num)-1) % 10000
-    elif case == 'L':
-        tmp = num // 1000
-        return num % 1000 * 10 + tmp
-    elif case == 'R':
-        tmp = num % 10
-        return num // 10 + 1000 * tmp
 
-d = ['D','S','L','R']
+def get_result(x, k):
+    if k == 'D':
+        return (x*2) % 10000
+    if k == 'S':
+        return x-1 if x != 0 else 9999
+    if k == 'L':
+        return (x % 1000)*10 + x//1000
+    if k == 'R':
+        return (x % 10)*1000 + x//10
 
-def bfs(a,b,visited):
-    q = deque([[a,'']])
-    visited[a] = 1
+
+T = int(input())
+for _ in range(T):
+    a, b = map(int, input().split())
+    dict = defaultdict(str)
+    dict[a] = ''
+    q = deque()
+    q.append(a)
     while q:
-        num, case = q.popleft()
-        print(num)
-        print(case)
-        if num == b:
-            print(case)
+        x = q.popleft()
+        if x == b:
             break
-        for i in range(4):
-            n_case = order(num, d[i])
-            if visited[n_case] == 0:
-                q.append((n_case,case+d[i]))
-                visited[n_case] = 1
-
-for _ in range(t):
-    visited = [0 for _ in range(10000)]
-    a,b = map(int, input().split())
-    bfs(a,b,visited)
+        for k in ['D', 'S', 'L', 'R']:
+            result = get_result(x, k)
+            if result not in dict:
+                q.append(result)
+                dict[result] = dict[x] + k
+    print(dict[b])
