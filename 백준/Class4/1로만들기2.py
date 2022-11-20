@@ -7,7 +7,6 @@ q.append((n,[n]))
 visited = [0]*(n+1)
 
 while q:
-    print(q)
     num,ans = q.popleft()
     if num == 1:
         print(len(ans)-1)
