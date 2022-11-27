@@ -11,5 +11,4 @@ for i in range(1, n+1):
     x = profit[i][0] - 1
     dp[i] = max(dp[i-1], dp[i])
     dp[i+x] = max(dp[i-1] + profit[i][1], dp[i+x])
-    print(dp)
 print(dp[n])
