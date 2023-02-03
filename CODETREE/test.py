@@ -40,3 +40,5 @@ for _ in range(n):
         print(1 if s.empty() else 0)
     else:
         print(s.top())
+
+# end
