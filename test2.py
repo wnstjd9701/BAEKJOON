@@ -18,4 +18,4 @@ def bfs(graph, start, visited):
                 queue.append(i)
                 visited[i] = True
 
-# DFS / BFS
+# DFS / BFS.
