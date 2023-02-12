@@ -12,3 +12,5 @@ if dp[k] == 10001:
     print(-1)
 else:
     print(dp[k])
+
+# DP
