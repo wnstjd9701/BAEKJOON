@@ -1,7 +1,11 @@
 # 프로그래머스 2단계 - H-Index
 def solution(citations):
     citations.sort()
-    for idx, citation in enumerate(citations):
-        if citation >= len(citations) - idx:
-            return len(citations) - idx 
+    length = len(citations)
+
+    for i in range(length):
+        if citations[i] >= length-i:
+            return length-i
+    return 0
+
 print(solution([3,0,6,1,5]))
