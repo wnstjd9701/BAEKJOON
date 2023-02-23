@@ -29,7 +29,7 @@ while 1:
         queue.popleft()
     else:
         graph[x][y] = 0
-        
+
     if time == turn[i][0]:
         if turn[i][1] == 'L':
             d = (d - 1) % 4
@@ -39,3 +39,4 @@ while 1:
             i += 1
 
 print(time)
+# Samsung
