@@ -1,21 +1,7 @@
-def dfs(graph, v, visited):
-    visited[v] = True
-    print(v, end=" ")
-    for i in graph[v]:
-        if not visited:
-            dfs(graph, i, visited)
+from asyncio.windows_events import NULL
 
-from collections import deque
-def bfs(graph, start, visited):
-    queue = deque([start])
-    visited[start] = True
 
-    while queue:
-        v = queue.popleft()
-        print(v, end=' ')
-        for i in graph[v]:
-            if not visited[i]:
-                queue.append(i)
-                visited[i] = True
-
-# DFS / BFS.
+team = [[] for _ in range(6)]
+if len(team[0]) == 0:
+    print(0)
+print(team)
