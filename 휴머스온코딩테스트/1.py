@@ -17,7 +17,6 @@ def solution(stats):
     for s in stack:
         if s[0] > 0:
             answer += 1
-   
     return answer
 print(solution([5,3,4,6,2,1]))
 print(solution([6,2,3,4,1,5]))
