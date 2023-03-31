@@ -8,5 +8,3 @@ for i in range(n):
         if arr[i] < arr[j]:
             dp[i] = max(dp[i], dp[j]+1)
 print(max(dp))
-
-print(dp)
