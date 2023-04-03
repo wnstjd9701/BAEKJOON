@@ -11,7 +11,8 @@ bomb_length = len(bomb)
 
 for char in s:
     stack.append(char)
-    if ''.join(stack[-bomb_length:]) == bomb:
+    # print(stack)
+    if char == bomb[-1] and ''.join(stack[-bomb_length:]) == bomb:
         for _ in range(bomb_length):
             stack.pop()
 
