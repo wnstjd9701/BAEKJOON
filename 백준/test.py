@@ -25,5 +25,3 @@ def dfs(depth, idx):
 
 dfs(0,0)
 print(min_diff)
-
-# Github Pull Request Test
