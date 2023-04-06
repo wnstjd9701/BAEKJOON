@@ -16,7 +16,6 @@ def solution(k, dungeons):
     return answer
 solution(80, [[80,20],[50,40],[30,10]])
 
-
 #Backtracking
 answer = 0
 def dfs(k, cnt, dungeons, visited):
@@ -30,14 +29,14 @@ def dfs(k, cnt, dungeons, visited):
             dfs(k - dungeons[i][1], cnt + 1, dungeons, visited)
             visited[i] = False
         
-def solution(k, dungeons):
+def solution2(k, dungeons):
     global answer
     visited = [False] * len(dungeons)
     dfs(k, 0, dungeons, visited)
     return answer
 
 # BFS
-def solution(k, dungeons):
+def solution3(k, dungeons):
     answer = -1
     queue = deque()
     queue.append((k, []))
