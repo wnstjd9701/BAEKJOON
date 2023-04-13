@@ -6,6 +6,7 @@ def move_pho(horse_list):
     for i in range(n-1):
         s = horse[i] + horse[i+1] 
         if s == 'HH':
+            horse[i+1] = 'L'
             cnt += 1
         elif horse[i] == 'Y': # Y를 만났을 때 
             if len(check_x) < 1 and cnt >= 1: # X가 없는데 Y를 만났고 COUNT가 1보다 크면 HH가 이전에 나온 것이므로 
@@ -14,6 +15,7 @@ def move_pho(horse_list):
                 break
         elif horse[i] == 'X':
             check_x.append('X')
+        
     return cnt
 
 t = int(input())
