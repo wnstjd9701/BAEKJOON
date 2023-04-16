@@ -33,3 +33,26 @@ for _ in range(t):
         vertical_list.append(graph[i][y])
     answer = move_pho(horizonal_list) + move_pho(vertical_list)
     print(answer)
+
+# 간단한 해결
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    answer = 0
+    graph = [list(map(str, input().split())) for _ in range(n)]
+    for i in range(n):
+        for j in range(n):
+            if graph[i][j] == 'X':
+                x, y = i, j
+    horizonal, vertical = "",""
+    for i in range(n):
+        horizonal += graph[x][i]
+        vertical += graph[i][y]
+    answer = 0
+    for s in horizonal.split('Y'):
+        if 'X' in s and 'HH' in s:
+            answer += s.count('HH')
+    for s in vertical.split('Y'):
+        if 'X' in s and 'HH' in s:
+            answer += s.count('HH')
+    print(answer)
