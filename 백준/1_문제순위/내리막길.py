@@ -20,6 +20,6 @@ def dfs(x, y):
                 if graph[x][y] > graph[nx][ny]:
                     dp[x][y] += dfs(nx,ny)
     return dp[x][y]
-
 print(dfs(0,0))
+print(dp)
     
