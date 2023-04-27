@@ -58,7 +58,7 @@ def dijkstra(start):
             continue
         # 현재 노드가 이미 처리된 적이 있는 노드라면 무시(이미 최단 거리라면 무시)
         for i in graph[now]:
-            cost = dist + i[i]
+            cost = dist + i[1]
             # 현재 노드를 거쳐서, 다른 노드로 이동하는 거리가 더 짧은 경우
             if cost < distance[i[0]]:
                 distance[i[0]] = cost
