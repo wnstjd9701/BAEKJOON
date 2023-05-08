@@ -2,7 +2,7 @@
 import sys
 input = sys.stdin.readline
 
-def dfs(r, c, idx, total):
+def dfs(x, y, idx, total):
     global ans
     if ans >= total + max_val * (3 - idx):
         return
@@ -11,30 +11,30 @@ def dfs(r, c, idx, total):
         return
     else:
         for i in range(4):
-            nr = r + dr[i]
-            nc = c + dc[i]
-            if 0 <= nr < n and 0 <= nc < m and visit[nr][nc] == 0:
+            nx = x + dx[i]
+            ny = y + dy[i]
+            if 0 <= nx < n and 0 <= ny < m and visit[nx][ny] == 0:
                 if idx == 1:
-                    visit[nr][nc] = 1
-                    dfs(r, c, idx + 1, total + arr[nr][nc])
-                    visit[nr][nc] = 0
-                visit[nr][nc] = 1
-                dfs(nr, nc, idx + 1, total + arr[nr][nc])
-                visit[nr][nc] = 0
+                    visit[nx][ny] = 1
+                    dfs(x, y, idx + 1, total + arr[nx][ny])
+                    visit[nx][ny] = 0
+                visit[nx][ny] = 1
+                dfs(nx, ny, idx + 1, total + arr[nx][ny])
+                visit[nx][ny] = 0
 
 
 n, m = map(int, input().split())
 arr = [list(map(int, input().split())) for _ in range(n)]
 visit = [([0] * m) for _ in range(n)]
-dr = [-1, 0, 1, 0]
-dc = [0, 1, 0, -1]
+dx = [-1, 0, 1, 0]
+dy = [0, 1, 0, -1]
 ans = 0
 max_val = max(map(max, arr))
 
-for r in range(n):
-    for c in range(m):
-        visit[r][c] = 1
-        dfs(r, c, 0, arr[r][c])
-        visit[r][c] = 0
+for x in range(n):
+    for y in range(m):
+        visit[x][y] = 1
+        dfs(x, y, 0, arr[x][y])
+        visit[x][y] = 0
 
 print(ans)
