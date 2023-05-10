@@ -1,30 +1,31 @@
 # test python
-import heapq
-def dijkstra(start):
-    q = []
-    distance = [1e9] * (n+1)
-    heapq.heappush(q, (0, start))
-    distance[start] = 0
+from collections import deque
+dx, dy = [0,0,-1,1], [1,-1,0,0]
+n = int(input())
+graph = [list(map(int, input())) for _ in range(n)]
+visited = [[0]*n for _ in range(n)]
+def bfs(x, y):
+    q = deque()
+    q.append((x,y))
+    visited[x][y] = 1
+    global cnt
     while q:
-        dist, now = heapq.heappop(q)
-        if distance[now] < dist:
-            continue
-        for i in graph[now]:
-            cost = dist + i[1]
-            if distance[i[0]] > cost:
-                distance[i[0]] = cost
-                heapq.heappush(q, (cost, i[0]))
-    return distance
-
-n, m, x = map(int, input().split())
-graph = [[] for _ in range(n+1)]
-for _ in range(m):
-    a, b, cost = map(int, input().split())
-    graph[a].append((b, cost))
-
-result = 0
-for i in range(1, n+1):
-    go = dijkstra(i)
-    back = dijkstra(x)
-    result = max(result, go[x] + back[i])
-print(result)
+        x, y = q.popleft()
+        for i in range(4):
+            nx = x + dx[i]
+            ny = y + dy[i]
+            if 0 <= nx < n and 0 <= ny < n and graph[nx][ny] == 1 and not visited[nx][ny]:
+                visited[nx][ny] = 1
+                cnt += 1
+                q.append((nx, ny))
+    return cnt
+answer = []
+for i in range(n):
+    for j in range(n):
+        if graph[i][j] == 1 and not visited[i][j]:
+            cnt = 1
+            answer.append(bfs(i, j))
+answer.sort()
+print(len(answer))
+for i in answer:
+    print(i)
