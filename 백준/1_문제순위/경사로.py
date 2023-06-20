@@ -3,7 +3,6 @@ n, l = map(int, input().split())
 graph = [list(map(int, input().split())) for _ in range(n)]
 ans = 0
 
-
 def check_line(line):
     for i in range(1, n):
         if abs(line[i] - line[i - 1]) > 1:
